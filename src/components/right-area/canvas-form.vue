@@ -2,14 +2,6 @@
   <div>
     <div>
       <el-divider content-position="left">画布配置</el-divider>
-      <!-- <el-form size="mini">
-        <el-form-item label="MQTT地址">
-          <el-radio-group v-model="options.grid">
-            <el-radio :label="true">开启</el-radio>
-            <el-radio :label="false">关闭</el-radio>
-          </el-radio-group>
-        </el-form-item>
-      </el-form> -->
     </div>
     <div>
       <el-divider content-position="left">MQTT配置</el-divider>

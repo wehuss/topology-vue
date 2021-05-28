@@ -9,7 +9,8 @@ export default new Vuex.Store({
     curNode: null,
     canvas: null,
     canvasData: null,
-    vueNodesData: {}
+    vueNodesData: {},
+    line:null
   },
   getters: {
     vData: state => {
@@ -32,6 +33,9 @@ export default new Vuex.Store({
   mutations: {
     setCurNode(state, node) {
       state.curNode = node
+    },
+    setLine(state,line){
+      state.line=line
     },
     setCanvas(state, canvas) {
       state.canvas = canvas

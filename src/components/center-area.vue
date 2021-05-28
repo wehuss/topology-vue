@@ -50,11 +50,17 @@ export default {
       event.dataTransfer.setData('Topology', JSON.stringify(node.data))
     },
     topologyCanvasEvent(event, data) {
-      // console.log('event', event)
+      // console.log('event', event, data)
       switch (event) {
         case 'node':
-        // case 'addNode':
+          // case 'addNode':
+          this.$store.commit('setLine', null)
           this.$store.commit('setCurNode', data)
+          break
+        case 'addLine':
+        case 'line':
+          this.$store.commit('setCurNode', null)
+          this.$store.commit('setLine', data)
           break
         case 'moveInNode':
           break
@@ -62,6 +68,7 @@ export default {
           break
         case 'space':
           this.$store.commit('setCurNode', null)
+          this.$store.commit('setLine', null)
           break
         case 'resizePens':
           this.handleResizePens(data)
