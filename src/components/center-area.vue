@@ -95,8 +95,8 @@ export default {
       } else {
         nodeIdList.forEach(id => {
           if (vueNodesData[id]) {
-            vueNodesData[id].component.handleResize &&
-              vueNodesData[id].component.handleResize()
+            const component = vueNodesData[id]
+            component.handleResize && component.handleResize()
           }
         })
       }
