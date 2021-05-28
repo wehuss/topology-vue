@@ -2,6 +2,7 @@ import Vue from 'vue'
 import store from '../store/index'
 import { s8, createDiv, rectangle } from '@topology/core'
 
+// 通过extend创建出来的组件示例上没有$store,所以将store挂载到vue上
 Vue.prototype.$store = store
 
 let { vueNodesData } = store.state
@@ -36,9 +37,7 @@ const vueNodes = (VueComponent) => (ctx, node) => {
     // 添加当前节点到div层，否则无法显示
     node.addToDiv()
 
-    let Component = Vue.extend(VueComponent, {
-
-    })
+    let Component = Vue.extend(VueComponent)
     vueNodesData[node.id].component = new Component({
       el: vueNodesData[node.id].div.children[0],
       beforeMount() {
