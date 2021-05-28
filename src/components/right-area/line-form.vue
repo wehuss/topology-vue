@@ -3,6 +3,9 @@
     <el-divider content-position="left">连线配置</el-divider>
     <div>
       <el-form size="mini">
+        <el-form-item label="连线文本">
+          <el-input v-model="line.text" />
+        </el-form-item>
         <el-form-item label="连线类型">
           <line-select type="name" v-model="line.name" />
         </el-form-item>
