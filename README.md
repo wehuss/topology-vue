@@ -1,5 +1,5 @@
 # topology-vue
-一个包含了乐吾乐核心库基本使用的Vue项目,参照[topology-react](https://github.com/Summer-andy/topology-react)进行编写
+一个包含了乐吾乐核心库基本使用的Vue项目,参照[topology-react](https://github.com/Summer-andy/topology-react)进行编写。如果本项目对你有帮助的话，可以给我点个star吗QAQ
 
 ### 实现的功能
 
